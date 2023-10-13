@@ -34,7 +34,6 @@ body{
     --state-menu: translate(0);
     --state-close:scale(1);
     --state-hamburguer:scale(0);
-
 }
 .nav__logo{
     font-size: 2.5rem;
@@ -80,4 +79,28 @@ body{
     font-size: 1.2rem;
     letter-spacing: 2px;
 
+}
+@media(min-width:760px){
+    .nav{
+        --state-hamburguer:scale(0);
+        --state-menu: translate(0);
+
+    }
+    .nav:target{
+        --state-close:scale(0);
+    }
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5rem;
+        grid-auto-flow: column;
+        transform:unset;
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
 }
